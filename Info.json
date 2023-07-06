@@ -1,0 +1,10 @@
+﻿{
+  "Id": "ADDB.SuperFantasyKingdom.RandomThings",
+  "DisplayName": "Random Things",
+  "Author": "ADDB",
+  "Version": "0.1.0",
+  "ManagerVersion": "0.25.5",
+  "Requirements": [],
+  "AssemblyName": "RandomThings.dll",
+  "EntryMethod": "RandomThings.Main.Load"
+}

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomThings", "RandomThings.csproj", "{CA186A28-52FD-4199-BE1C-CFA22A15A8CF}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "ModKitSrc", "ModKit\ModKitSrc.shproj", "{7D3F9428-C134-47FE-9D04-305B4D330401}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA186A28-52FD-4199-BE1C-CFA22A15A8CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA186A28-52FD-4199-BE1C-CFA22A15A8CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA186A28-52FD-4199-BE1C-CFA22A15A8CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA186A28-52FD-4199-BE1C-CFA22A15A8CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D798264F-6085-4180-9586-D186F4205D53}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		ModKit\ModKitSrc.projitems*{7d3f9428-c134-47fe-9d04-305b4d330401}*SharedItemsImports = 13
+		ModKit\ModKitSrc.projitems*{ca186a28-52fd-4199-be1c-cfa22a15a8cf}*SharedItemsImports = 4
+	EndGlobalSection
+EndGlobal
