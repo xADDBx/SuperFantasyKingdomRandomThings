@@ -13,14 +13,14 @@ namespace ModKit {
         public static void SaveSettings<T>(this ModEntry modEntry, string fileName, T settings) {
             var userConfigFolder = modEntry.Path + "UserSettings";
             Directory.CreateDirectory(userConfigFolder);
-            var userPath = $"{userConfigFolder}{Path.DirectorySeparatorChar}{fileName}";
+            var userPath = $"{userConfigFolder}{System.IO.Path.DirectorySeparatorChar}{fileName}";
             File.WriteAllText(userPath, JsonConvert.SerializeObject(settings, Formatting.Indented));
         }
         public static void LoadSettings<T>(this ModEntry modEntry, string fileName, ref T settings) where T : IUpdatableSettings, new() {
             var assembly = Assembly.GetExecutingAssembly();
             var userConfigFolder = modEntry.Path + "UserSettings";
             Directory.CreateDirectory(userConfigFolder);
-            var userPath = $"{userConfigFolder}{Path.DirectorySeparatorChar}{fileName}";
+            var userPath = $"{userConfigFolder}{System.IO.Path.DirectorySeparatorChar}{fileName}";
             try {
                 foreach (var res in assembly.GetManifestResourceNames()) {
                     //Logger.Log("found resource: " + res);
@@ -46,7 +46,7 @@ namespace ModKit {
                     settings = userSettings;
                 } catch {
                     Mod.Error("Failed to load user settings. Settings will be rebuilt.");
-                    try { File.Copy(userPath, userConfigFolder + $"{Path.DirectorySeparatorChar}BROKEN_{fileName}", true); } catch { Mod.Error("Failed to archive broken settings."); }
+                    try { File.Copy(userPath, userConfigFolder + $"{System.IO.Path.DirectorySeparatorChar}BROKEN_{fileName}", true); } catch { Mod.Error("Failed to archive broken settings."); }
                 }
             }
             File.WriteAllText(userPath, JsonConvert.SerializeObject(settings, Formatting.Indented));

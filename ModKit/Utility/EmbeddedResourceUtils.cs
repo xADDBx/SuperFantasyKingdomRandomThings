@@ -47,15 +47,14 @@ namespace ModKit {
 
                         haveExtension = true;
                     }
-                }
-                else {
+                } else {
                     escapeDot = false;
                 }
 
                 stringBuilder.Append(resourceName[resourceNameIndex]);
             }
 
-            var fileName = Path.GetDirectoryName(stringBuilder.ToString());
+            var fileName = System.IO.Path.GetDirectoryName(stringBuilder.ToString());
             return fileName == null ? null : new string(fileName.Reverse().ToArray());
         }
     }

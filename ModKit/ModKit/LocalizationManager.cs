@@ -79,7 +79,7 @@ namespace ModKit {
         }
 
         public void Enable(UnityModManager.ModEntry modEntry) {
-            var separator = Path.DirectorySeparatorChar;
+            var separator = System.IO.Path.DirectorySeparatorChar;
             _localFolderPath = modEntry.Path + "Localization" + separator;
             _localDefault = new TDefaultLanguage { Version = modEntry.Version };
         }
@@ -96,12 +96,11 @@ namespace ModKit {
                 if (Directory.Exists(_localFolderPath)) {
                     var files = Directory.GetFiles(_localFolderPath, searchPattern);
                     for (var i = 0; i < files.Length; i++) {
-                        files[i] = Path.GetFileName(files[i]);
+                        files[i] = System.IO.Path.GetFileName(files[i]);
                     }
                     return files;
                 }
-            }
-            catch {
+            } catch {
             }
             return new string[0];
         }
@@ -141,8 +140,7 @@ namespace ModKit {
 
                     return true;
                 }
-            }
-            catch (Exception e) {
+            } catch (Exception e) {
                 onError(e);
             }
 
@@ -168,8 +166,7 @@ namespace ModKit {
 
                     return true;
                 }
-            }
-            catch (Exception e) {
+            } catch (Exception e) {
                 onError(e);
             }
 

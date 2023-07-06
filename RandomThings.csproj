@@ -51,18 +51,11 @@
       <HintPath>$(SuperFantasyPath)\Super Fantasy Kingdom_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="dnlib">
-      <HintPath>$(SuperFantasyPath)\Super Fantasy Kingdom_Data\Managed\UnityModManager\dnlib.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Microsoft.Build.Framework" />
     <Reference Include="Microsoft.Build.Utilities.v4.0" />
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="Rewired_Core">
-      <HintPath>$(SuperFantasyPath)\Super Fantasy Kingdom_Data\Managed\Rewired_Core.dll</HintPath>
-      <Private>Fals
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net.Http" />
@@ -107,7 +100,6 @@
     <Compile Include="Classes\UI\DateViewer.cs" />
     <Compile Include="Classes\Main.cs" />
     <Compile Include="Classes\Patches\Tweaks.cs" />
-    <Compile Include="Classes\UI\InventoryUI.cs" />
     <Compile Include="Classes\UI\OtherUI.cs" />
     <Compile Include="Classes\Util\Extensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
